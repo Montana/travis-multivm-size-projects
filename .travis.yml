@@ -4,14 +4,12 @@ os: freebsd
 
 jobs:
   include:
-    - dist: focal
-      script:
+     - script:
         - uname -mrs
         - freebsd-version
         - sysctl -a hw.model
         - sysctl -a | grep -i hw.*cpu
         - python3 hello.py
-    - dist: focal
       vm:
         size: medium
       script:
@@ -20,7 +18,6 @@ jobs:
         - sysctl -a hw.model
         - sysctl -a | grep -i hw.*cpu
         - python3 hello.py
-    - dist: focal
       vm:
         size: large
       script:
@@ -29,6 +26,5 @@ jobs:
         - sysctl -a hw.model
         - sysctl -a | grep -i hw.*cpu
         - python3 hello.py
-    - dist: focal
       vm:
         size: x-large
