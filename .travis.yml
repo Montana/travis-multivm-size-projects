@@ -1,6 +1,5 @@
 language: python
 install: skip
-arch: arm64
 
 jobs:
   include:
@@ -10,7 +9,7 @@ jobs:
         - freebsd-version
         - sysctl -a hw.model
         - sysctl -a | grep -i hw.*cpu
-        - chmod u+x python3 hello.py
+        - python3 ./hello.py
     - os: freebsd
       vm:
         size: medium
