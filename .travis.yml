@@ -6,21 +6,29 @@ jobs:
   include:
     - dist: focal
       script:
-        - echo "Threads/core $(nproc --all)"
-        - free -g
+        - uname -mrs
+        - freebsd-version
+        - sysctl -a hw.model
+        - sysctl -a | grep -i hw.*cpu
         - python3 hello.py
     - dist: focal
       vm:
         size: medium
       script:
-        - echo "Threads/core $(nproc --all)"
-        - free -g
+        - uname -mrs
+        - freebsd-version
+        - sysctl -a hw.model
+        - sysctl -a | grep -i hw.*cpu
+        - python3 hello.py
     - dist: focal
       vm:
         size: large
       script:
-        - echo "Threads/core $(nproc --all)"
-        - free -g
+        - uname -mrs
+        - freebsd-version
+        - sysctl -a hw.model
+        - sysctl -a | grep -i hw.*cpu
+        - python3 hello.py
     - dist: focal
       vm:
         size: x-large
