@@ -72,31 +72,3 @@ jobs:
        script: python ./hello.py
        vm:
          size: 2x-large
-     - os: windows
-     - os: windows
-       vm:
-         size: medium
-     - os: windows
-       vm:
-         size: large
-     - os: windows
-       vm:
-         size: x-large
-     - os: windows
-       vm:
-         size: 2x-large
-     - arch: ppc64le
-     - arch: s390x
-     - arch: arm64
-     - arch: arm64
-       vm:
-         size: large
-     - arch: arm64-graviton2
-       group: edge
-       dist: focal
-     - arch: arm64-graviton2
-       group: edge
-       dist: focal
-       virt: vm
-       vm:
-         size: x-large
