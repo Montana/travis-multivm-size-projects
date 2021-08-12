@@ -22,12 +22,3 @@ jobs:
     - os: freebsd
       vm:
         size: large
-      script:
-        - uname -mrs
-        - freebsd-version
-        - sysctl -a hw.model
-        - sysctl -a | grep -i hw.*cpu
-        - python3 hello.py
-    - os: freebsd 
-      vm:
-        size: x-large
