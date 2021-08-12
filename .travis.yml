@@ -3,7 +3,7 @@ install: skip
 
 jobs:
   include:
-     - script:
+      script:
         - uname -mrs
         - freebsd-version
         - sysctl -a hw.model
