@@ -1,8 +1,10 @@
 language: python
 install: skip
+arch: arm64
 
 jobs:
   include:
+    - os: freebsd
       script:
         - uname -mrs
         - freebsd-version
