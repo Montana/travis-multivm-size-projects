@@ -30,29 +30,6 @@ jobs:
       script:
         - echo "Threads/core $(nproc --all)"
         - free -g
-    - os: osx
-      python: '2.7'
-      script: python ./hello.py
-    - os: osx
-      python: '2.7'
-      script: python ./hello.py
-      vm:
-        size: medium
-    - os: osx
-      python: '2.7'
-      script: python ./hello.py
-      vm:
-        size: large
-    - os: osx
-      python: '2.7'
-      script: python ./hello.py
-      vm:
-        size: x-large
-    - os: osx
-      python: '2.7'
-      script: python ./hello.py
-      vm:
-        size: 2x-large
     - os: freebsd
       script: python ./hello.py
     - os: freebsd
