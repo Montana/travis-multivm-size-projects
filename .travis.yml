@@ -1,10 +1,4 @@
-- dist: focal
-       vm:
-         size: 2x-large
-       script: 
-        - echo "Threads/core $(nproc --all)"
-        - free -g
-     - os: osx
+- os: osx
        python: "2.7"
        script: python ./hello.py
      - os: osx
