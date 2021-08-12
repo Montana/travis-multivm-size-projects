@@ -3,13 +3,12 @@ install: skip
 
 jobs:
   include:
-    - os: freebsd
-      script:
+     - script:
         - uname -mrs
         - freebsd-version
         - sysctl -a hw.model
         - sysctl -a | grep -i hw.*cpu
-        - python3 hello.py
+        - chmod u+x python3 hello.py
     - os: freebsd
       vm:
         size: medium
