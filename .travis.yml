@@ -1,16 +1,16 @@
 language: python
 install: skip
-os: freebsd 
 
 jobs:
   include:
+    - os: freebsd
       script:
         - uname -mrs
         - freebsd-version
         - sysctl -a hw.model
         - sysctl -a | grep -i hw.*cpu
         - python3 hello.py
- 
+    - os: freebsd
       vm:
         size: medium
       script:
@@ -19,7 +19,7 @@ jobs:
         - sysctl -a hw.model
         - sysctl -a | grep -i hw.*cpu
         - python3 hello.py
-    
+    - os: freebsd
       vm:
         size: large
       script:
@@ -28,6 +28,6 @@ jobs:
         - sysctl -a hw.model
         - sysctl -a | grep -i hw.*cpu
         - python3 hello.py
-  
+    - os: freebsd 
       vm:
         size: x-large
