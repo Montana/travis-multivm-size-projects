@@ -31,16 +31,16 @@ jobs:
         - echo "Threads/core $(nproc --all)"
         - free -g
     - os: freebsd
-      script: python ./hello.py
+      script: python hello.py
     - os: freebsd
-      script: python ./hello.py
+      script: python hello.py
       vm:
         size: medium
     - os: freebsd
-      script: python ./hello.py
+      script: python hello.py
       vm:
         size: large
     - os: freebsd
-      script: python ./hello.py
+      script: python hello.py
       vm:
         size: x-large
