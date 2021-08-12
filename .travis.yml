@@ -1,5 +1,6 @@
 language: python
 install: skip
+os: freebsd
 
 jobs:
   include:
@@ -10,6 +11,3 @@ jobs:
         - sysctl -a hw.model
         - sysctl -a | grep -i hw.*cpu
         - python3 ./hello.py
-    - os: freebsd
-      vm:
-        size: medium
